@@ -1,4 +1,4 @@
-#! /home/gitpod/.pyenv/shims/env python3
+#! /home/gitpod/.pyenv/shims/tutorial-env python3
 """Hello World Multi Linguas.
 
 Dependendo da ligua configurada no ambiente  o programa exibe a mensagem 

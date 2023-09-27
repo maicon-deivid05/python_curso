@@ -4,7 +4,7 @@
 Imprimir a lista de crianças agrupada por aula
 que frenquentas cada uma das atividades
 """
-__version__ ='0.1.0'
+__version__ ='0.1.1'
 
 # Dados
 sala1 = ["Erik","Maia","Gustavo","Manuel","Sofia","Joana"]
@@ -24,16 +24,14 @@ for nome_atividade, atividade in atividade:
 
     print(f"Alunos da atividade {nome_atividade}\n")
     print("-" * 40)
-    atividade_sala1 = []
-    atividade_sala2 = []
 
-    for aluno in atividade:
-            if aluno in sala1:
-                atividade_sala1.append(aluno)
-            elif aluno in sala2:
-                atividade_sala2.append(aluno)
+    # Sala1 que tem interseção com a atividade
+    atividade_sala1 = set(sala1) & set(atividade)
+    atividade_sala2 = set(sala2).intersection(atividade)
+
 
     print("Sala1",atividade_sala1)
     print("Sala2",atividade_sala2)
+
     print()
     print("#" * 40)

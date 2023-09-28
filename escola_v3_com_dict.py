@@ -16,8 +16,8 @@ aula_danca=["Gustavo","Sofia","Joana","Antonio"]
 
 atividade = [
     ("Ingles",aula_ingles),
-    ("dança",aula_danca),
-    ("musica",aula_musica)
+    ("Dança",aula_danca),
+    ("Musica",aula_musica)
     ]
 
 # Listar alunos em cada atividade por sala

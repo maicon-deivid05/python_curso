@@ -2,17 +2,23 @@
 
 import os
 import sys
-#LBYL - Look Before You Leap
 
-if os.path.exists("names.txt"):
-    input("...") # Race condition
+# EAFP - Easy to ASK Forgivenes than permission
+#(É mais facil pedir perdao do que permissao)
+
+try:
     names = open("names.txt").readlines()
-else:
-    print("[Error] File names.txt not found")
+    # FileNotFoundError
+except FileNotFoundError as e: 
+    print(f"{str(e)}")
     sys.exit(1)
-
-if len(names) >= 3:
-    print(names[2])
 else:
+    print("Sucesso!!!")
+finally:
+    print("execute isso sempre")
+
+try:
+    print(names[2])
+except:
     print("[Error] Missing name in the list")
     sys.exit(1)
